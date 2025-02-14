@@ -57,7 +57,7 @@ function ShowState({active , setActive , fetchingstats , updatestate , darkmode}
   const handleGetAllFolder = async ()=>{
         
      try{
-         const response = await axios.get('http://localhost:8000/admin/allfolder');
+         const response = await axios.get('https://godday-admin-backend.onrender.com/admin/allfolder');
          setAllFolder(response.data);
          //alert("Get all folder Name");
          console.log("All Folder Name",response.data);
@@ -76,7 +76,7 @@ function ShowState({active , setActive , fetchingstats , updatestate , darkmode}
  
   const handleGetAllUser = async (req,res)=>{
       try{
-              const getalluserdata = await axios.get('http://localhost:8000/admin/alluser');
+              const getalluserdata = await axios.get('https://godday-admin-backend.onrender.com/admin/alluser');
               setUsers(getalluserdata.data);
               console.log("All User data is ",getalluserdata.data);
       }
