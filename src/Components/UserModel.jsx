@@ -31,7 +31,7 @@ function UserModel({users , setUsers}) {
 
     try{
 
-      const response = await axios.patch('http://localhost:8000/admin/access', 
+      const response = await axios.patch('https://godday-admin-backend.onrender.com/admin/access', 
         {
             email : selectedEmail,
             newpassword : editpass
@@ -78,7 +78,7 @@ function UserModel({users , setUsers}) {
    const handleDelete = async (id) => {
     console.log("Id in forntend",id);
     try {
-      const response = await axios.delete(`http://localhost:8000/admin/delete`, {
+      const response = await axios.delete(`https://godday-admin-backend.onrender.com/admin/delete`, {
         data: { id },
         headers: {
             "Content-Type": "application/json",
