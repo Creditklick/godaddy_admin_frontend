@@ -34,7 +34,7 @@ function AllFolder({folders_data}) {
          console.log("new password for folder is ",newfolderpassword);
 
          try{
-              const response = await axios.patch('http://localhost:8000/admin/access/folder',
+              const response = await axios.patch('https://godday-admin-backend.onrender.com/admin/access/folder',
                   {
                      foldername : foldername,
                      folderpassword : newfolderpassword
