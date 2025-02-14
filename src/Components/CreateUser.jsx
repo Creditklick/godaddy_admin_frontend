@@ -23,7 +23,7 @@ function CreateUser() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8000/admin/signup",
+        "https://godday-admin-backend.onrender.com/admin/signup",
         { name, email, password },
         { headers: { "Content-Type": "application/json" } }
       );
