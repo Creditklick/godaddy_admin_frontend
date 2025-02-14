@@ -89,7 +89,7 @@ function AppContent() {
 
   const fetchingstats = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/admin/stat");
+      const response = await axios.get("https://godday-admin-backend.onrender.com/admin/stat");
       console.log("Response for fetch stats is ", response.data);
       setUpdateState(response.data);
     } catch (err) {
