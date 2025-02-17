@@ -21,32 +21,33 @@ function CreateUser() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post(
-        "https://godday-admin-backend.onrender.com/admin/signup",
-        { name, email, password },
-        { headers: { "Content-Type": "application/json" } }
-      );
+    toast.error("Signup Off Currently");
+    // try {
+    //   const response = await axios.post(
+    //     "https://godday-admin-backend.onrender.com/admin/signup",
+    //     { name, email, password },
+    //     { headers: { "Content-Type": "application/json" } }
+    //   );
 
-      console.log("Signup successful", response.data);
+    //   console.log("Signup successful", response.data);
      
-       toast.success("Signup Successfull");
+    //    toast.success("Signup Successfull");
         
-    } catch (err) {
-      if (err.response) {
-        console.error("Signup failed:", err.response.data.message);
-        setError(err.response.data.message);
-        toast.error(err.response.data.message || "Signup Failed");
-      } else {
-        console.error("Error in signup request:", err.message);
-      }
-    }
-    finally{
-      setName('');
-      setPassword('');
-      setEmail('');
-      setError('');
-    }
+    // } catch (err) {
+    //   if (err.response) {
+    //     console.error("Signup failed:", err.response.data.message);
+    //     setError(err.response.data.message);
+    //     toast.error(err.response.data.message || "Signup Failed");
+    //   } else {
+    //     console.error("Error in signup request:", err.message);
+    //   }
+    // }
+    // finally{
+    //   setName('');
+    //   setPassword('');
+    //   setEmail('');
+    //   setError('');
+    // }
   };
 
 
